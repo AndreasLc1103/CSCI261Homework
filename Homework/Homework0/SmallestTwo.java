@@ -1,5 +1,3 @@
-package CSCI261Homework.Homework.Homework0;
-
 import java.util.Scanner;
 
 public class SmallestTwo {
@@ -35,9 +33,9 @@ public class SmallestTwo {
                 }
             }
             // print out the output of the dataset
-            
-            System.out.println(secondSmallest);
             System.out.println(smallest);
+            System.out.println(secondSmallest);
+            
         }
     }
 
