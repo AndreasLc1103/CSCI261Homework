@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class SmallestTwo {
 
+    /**
+     * @param inputStream
+     */
     public static void smallestTwo(int[] inputStream) {
         // if input stream only has one value
         if (inputStream.length <= 1) {
@@ -24,13 +27,17 @@ public class SmallestTwo {
             }
             // iterate the array and check the values
             for (int cursor = 0; cursor < inputStream.length; cursor++) {
-
+                if (inputStream[cursor] < smallest) {
+                    secondSmallest = smallest;
+                    smallest = inputStream[cursor];
+                } else if (inputStream[cursor] < secondSmallest && inputStream[cursor] > smallest) {
+                    secondSmallest = inputStream[cursor];
+                }
             }
             // print out the output of the dataset
-            for (int i : inputStream) {
-                System.out.println(i);
-            }
-
+            
+            System.out.println(secondSmallest);
+            System.out.println(smallest);
         }
     }
 
@@ -41,5 +48,10 @@ public class SmallestTwo {
         int inputLength = input.nextInt();
         // creates a
         int[] numbers = new int[inputLength];
+        for (int i = 0; i < inputLength; i++) {
+            numbers[i] = input.nextInt();
+        }
+
+        smallestTwo(numbers);
     }
 }
