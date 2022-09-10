@@ -23,7 +23,11 @@ public class MaxHeap {
         return ((2 * cursor) + 2);
     }
 
-    private int getMax() {
+    public int getRoot() {
+        return heap[0];
+    }
+
+    public int getMax() {
         int removed = this.heap[0];
         this.heap[0] = this.heap[--size];
         sortHeap(0);
@@ -45,15 +49,25 @@ public class MaxHeap {
         this.heap[endLoc] = temp;
     }
 
-    private void insert(int cursor) {
-        this.heap[size] = cursor;
+    public void insert(int input) {
+        this.heap[size] = input;
         int currentSize = size;
 
-        while (this.heap[currentSize] > this.heap[getParent(cursor)]) {
-            swap(currentSize, getLeft(cursor));
-            currentSize = getParent(cursor);
+        while (this.heap[currentSize] > this.heap[getParent(currentSize)]) {
+            swap(currentSize, getLeft(currentSize));
+            currentSize = getParent(input);
         }
         size++;
+    }
+
+    public void fillHeap(int[] input) {
+        for (int i : input) {
+            insert(i);
+        }
+    }
+
+    public int getSize() {
+        return size;
     }
 
     private void sortHeap(int cursor) {
