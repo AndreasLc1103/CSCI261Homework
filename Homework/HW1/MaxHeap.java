@@ -1,3 +1,4 @@
+
 import java.lang.Math;
 
 public class MaxHeap {
@@ -12,7 +13,7 @@ public class MaxHeap {
     }
 
     private int getParent(int cursor) {
-        return (int) Math.floor((cursor - 1) / 2);
+        return (cursor - 1) / 2;
     }
 
     private int getLeft(int cursor) {
@@ -54,7 +55,7 @@ public class MaxHeap {
         int currentSize = size;
 
         while (this.heap[currentSize] > this.heap[getParent(currentSize)]) {
-            swap(currentSize, getLeft(currentSize));
+            swap(currentSize, getParent(currentSize));
             currentSize = getParent(input);
         }
         size++;

@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Primes",
+            "request": "launch",
+            "mainClass": "Homework.HW0.Primes",
+            "projectName": "CSCI261Homework_7b73c95e"
+        },
+        {
+            "type": "java",
+            "name": "Launch SmallestTwo",
+            "request": "launch",
+            "mainClass": "Homework.HW0.SmallestTwo",
+            "projectName": "CSCI261Homework_7b73c95e"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindMaxPairsDouble",
+            "request": "launch",
+            "mainClass": "Homework.HW1.FindMaxPairsDouble",
+            "projectName": "CSCI261Homework_7b73c95e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Planters",
+            "request": "launch",
+            "mainClass": "Homework.HW1.Planters",
+            "projectName": "CSCI261Homework_7b73c95e"
+        }
+    ]
+}

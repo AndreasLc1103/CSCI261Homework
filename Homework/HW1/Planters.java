@@ -1,9 +1,12 @@
+
+
 import java.util.Scanner;
 
-public class Planters{
+public class Planters {
 
     public static void planters(int[] inPlanters, int[] inEmptyPlanters) {
         // Max heaps are created for both full and empty planters
+
         MaxHeap planters = new MaxHeap(inPlanters.length);
         MaxHeap emptyPlanters = new MaxHeap(inEmptyPlanters.length);
         // fills in the planter from the input arrays
@@ -12,14 +15,15 @@ public class Planters{
 
         while (planters.getSize() > 0) {
             if (planters.getRoot() < emptyPlanters.getRoot()) {
-                int spot = planters.getMax();
-                emptyPlanters.insert(spot);
+                planters.getMax();
             } else {
                 System.out.println("NO");
                 break;
             }
         }
-        System.out.println("Yes");
+        if (planters.getSize() == 0) {
+            System.out.println("YES");
+        }
     }
 
     public static void main(String[] args) {
@@ -30,11 +34,11 @@ public class Planters{
 
         int[] planters = new int[plantersCount];
         int[] emptyPlanters = new int[emptyPlantersCount];
-        for (int i : planters) {
-            i = scanner.nextInt();
+        for (int i = 0; i < planters.length - 1; i++) {
+            planters[i] = scanner.nextInt();
         }
-        for (int i : emptyPlanters) {
-            i = scanner.nextInt();
+        for (int i = 0; i < emptyPlanters.length - 1; i++) {
+            emptyPlanters[i] = scanner.nextInt();
         }
         planters(planters, emptyPlanters);
 
