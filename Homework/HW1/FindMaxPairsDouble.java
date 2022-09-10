@@ -4,7 +4,7 @@ package Homework.HW1;
 public class FindMaxPairsDouble {
 
     public static void main(String[] args) {
-        
+
     }
 
 }
