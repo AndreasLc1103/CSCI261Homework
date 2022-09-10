@@ -1,5 +1,3 @@
-package Homework.HW1;
-
 import java.lang.Math;
 
 public class MaxHeap {
@@ -9,6 +7,8 @@ public class MaxHeap {
 
     public MaxHeap(int maxSize) {
         this.maxSize = maxSize;
+        this.size = 0;
+        this.heap = new int[maxSize];
     }
 
     private int getParent(int cursor) {

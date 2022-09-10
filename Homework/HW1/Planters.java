@@ -1,9 +1,6 @@
-package Homework.HW1;
-
 import java.util.Scanner;
-import Homework.HW1.MaxHeap;
 
-public class Planters {
+public class Planters{
 
     public static void planters(int[] inPlanters, int[] inEmptyPlanters) {
         // Max heaps are created for both full and empty planters
@@ -19,6 +16,7 @@ public class Planters {
                 emptyPlanters.insert(spot);
             } else {
                 System.out.println("NO");
+                break;
             }
         }
         System.out.println("Yes");
