@@ -15,7 +15,9 @@ public class Planters {
 
         while (planters.getSize() > 0) {
             if (planters.getRoot() < emptyPlanters.getRoot()) {
-                planters.getMax();
+               int value = planters.getMax();
+                emptyPlanters.getMax();
+                emptyPlanters.insert(value);
             } else {
                 System.out.println("NO");
                 break;
