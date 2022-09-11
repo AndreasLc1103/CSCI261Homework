@@ -1,5 +1,3 @@
-package Homework.HW1;
-
 import java.util.Scanner;
 
 // try tc-grd hmwk1-3 FindMaxPairsDouble.java
@@ -59,10 +57,10 @@ public class FindMaxPairsDouble {
     static int[] calculateSums(int[] numbers, int numbersSize) {
         int n = numbersSize;
         // sums array to hold the number of sums created
-        int[] sumsArray = new int[n * ((n - 1) / 2)];
+        int[] sumsArray = new int[(int)(n * ((n - 1) / 2))];
         int sumsIndex = 0;
-        for (int i = 0; i < sumsArray.length; i++) {
-            for (int j = 0; j < sumsArray.length; j++) {
+        for (int i = 0; i < sumsArray.length -1; i++) {
+            for (int j = i + 1 ; j < sumsArray.length -1; j++) {
                 sumsArray[sumsIndex] = numbers[i] + numbers[j];
                 sumsIndex++;
             }
