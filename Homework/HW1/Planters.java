@@ -1,4 +1,4 @@
-
+package Homework.HW1;
 
 import java.util.Scanner;
 
@@ -15,7 +15,11 @@ public class Planters {
 
         while (planters.getSize() > 0) {
             if (planters.getRoot() < emptyPlanters.getRoot()) {
+<<<<<<< Updated upstream
                int value = planters.getMax();
+=======
+                int value = planters.getMax();
+>>>>>>> Stashed changes
                 emptyPlanters.getMax();
                 emptyPlanters.insert(value);
             } else {

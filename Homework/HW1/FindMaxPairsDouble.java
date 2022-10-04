@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
+=======
+package Homework.HW1;
+
+
+>>>>>>> Stashed changes
 import java.util.Scanner;
 
 // try tc-grd hmwk1-3 FindMaxPairsDouble.java
@@ -108,7 +114,12 @@ public class FindMaxPairsDouble {
         sort(calculatedSums, 0, calculatedSums.length - 1);
         // finds max sums
         double[] out = findMaxSum(calculatedSums, calculatedSums.length - 1);
+<<<<<<< Updated upstream
         System.out.println((int) out[0] + " " + String.format("%.6f", out[1]));
+=======
+        System.out.println((int) out[0] + " " + out[1]);
+        String.format(format, args)
+>>>>>>> Stashed changes
     }
 
 }

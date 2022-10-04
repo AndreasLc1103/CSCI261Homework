@@ -1,5 +1,4 @@
-    # problem #3
-
+    #problem #3 
     function merge(leftArray, rightArray){
         create list c to hold the output array
         int leftcursor = 0;
