@@ -1,0 +1,27 @@
+// Calculates the mean location value and returns it as an integer 
+function meanLocation(inputArray){
+     int sum = 0;
+     for(value in inputArray) {
+          sum += value;
+     }
+     return math.floor(sum / inputArray.length)
+}
+// calcateSum takes the series of best - i points to give back 
+lowest sum of the distances from the best point.
+function calcateSum(xArray, yArray, arrlegnth){
+     sum = 0;
+     bestX = meanLocation(xArray);
+     bestY = meanLocation(yArray);
+
+     for int i = 0; i < arrlegnth; i++{
+          sum += (math.abs(bestX - xArray[i]) + math.abs(bestY - yArray[i]))
+     }
+     return sum
+}
+
+function main(){
+     input first array 
+     input second array 
+     
+     print output.
+}
