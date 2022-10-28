@@ -1,0 +1,24 @@
+function middleKnapsack (inputSize, weight1, weight2){
+    initialize opt[0][v] = 0;
+    initialize opt[j][0] = 0;
+
+    targetJ = 0;
+    targetv = 0;
+
+    for v = 1; to weight2{
+        for j = 1; to inputSize{
+            if( wj > v){
+                // this is to show that it is out of bounds
+                opt[j][v] = opt[j-1][v]
+            }
+            if(wj <= vi){
+                opt[j][v] = opt[j-1][v-wj] + c
+
+            }else{
+                opt[j][v] = opt[j-1][v];
+                }
+            }
+        }
+    }
+    return opt[targetJ][targetV];
+}
