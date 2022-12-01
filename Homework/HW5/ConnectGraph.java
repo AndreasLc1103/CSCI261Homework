@@ -35,8 +35,8 @@ public class ConnectGraph {
         int numEdges = scan.nextInt();
         AdjacencyMatrixGraph graph = new AdjacencyMatrixGraph(numVertex, false);
         for (int i = 0; i < numEdges; i++) {
-            int start = scan.nextInt();
-            int end = scan.nextInt();
+            int start = scan.nextInt() - 1;
+            int end = scan.nextInt() - 1;
             graph.addEdge(start, end);
         }
         dfsRunner(graph, numVertex);

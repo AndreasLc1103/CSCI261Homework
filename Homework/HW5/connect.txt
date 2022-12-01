@@ -1,0 +1,54 @@
+class Graph {
+    private boolean adjacencyMatrix[][];
+    private int numVertex;
+    private boolean directed;
+
+    function addEdge(int i, int j) {
+        if (directed) {
+            adjacencyMatrix[i][j] = true;
+        } else {
+            adjacencyMatrix[i][j] = true;
+            adjacencyMatrix[j][i] = true;
+        }
+    }
+
+    function removeEdge(int i, int j) {
+        if (directed) {
+            adjacencyMatrix[i][j] = false;
+        } else {
+            adjacencyMatrix[i][j] = false;
+            adjacencyMatrix[j][i] = false;
+        }
+    }
+    function readMatrix(int i, int j) {
+        return adjacencyMatrix[i][j];
+    }
+
+   function length() {
+        return numVertex;
+    }
+
+}
+
+function dfsRunner(Graph g, int vertex) {
+        visited[] = new boolean[vertex];
+        // counter to see if it gets through the
+        connections = 0;
+        counter = 0;
+        while (counter < visited.length) {
+            if (!visited[counter]) {
+                dfs(g, counter, visited);
+                connections++;
+            }
+            counter++;
+        }
+        print(connections - 1);
+    }
+
+function dfs(Graph g, int started, boolean visit[]) {
+        visit[started] = true;
+        for (int i = 0; i < g.length(); i++) {
+            if (g.readMatrix(i, started) && (!visit[i])) {
+                dfs(g, i, visit);
+            }
+        }

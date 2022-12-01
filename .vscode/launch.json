@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ConnectGraph",
+            "request": "launch",
+            "mainClass": "Homework.HW5.ConnectGraph",
+            "projectName": "CSCI261Homework_7b73c95e"
+        },
+        {
+            "type": "java",
             "name": "Launch KnapsackWeightBoundsWithSolution",
             "request": "launch",
             "mainClass": "Homework.HW4.KnapsackWeightBoundsWithSolution",

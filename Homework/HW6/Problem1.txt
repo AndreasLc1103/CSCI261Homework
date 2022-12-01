@@ -1,0 +1,39 @@
+function Kruzkal (inputWGraph) {
+    let mst = [];
+    sort the edges from subset f order of weight
+    Union(vertex)
+    for edge e = (u , v) do 
+        if find (u) != union.find(v){
+            Add e to T
+            Union(u,v)
+        }
+    return T
+}
+
+Union() {
+    init(V){
+        for every vertex v do 
+        boss[v] = V
+        size[v] = 1
+        set[v] = {v}
+    }
+
+    function find(){
+        return boss[u]
+    }
+
+    function Union(u,v){
+        if size[Boss[u] = set[boss[u]]] then 
+            set[boss[u]] = set[boss[u]]U set[boss[v]]
+            size[boss[u]] += size[boss[v]]
+            for every z in set[boss[v]] do 
+                boss[z] = boss[u]
+        else 
+            set[boss[v]] = set[boss[u]]U set[boss[u]]
+                size[boss[v]] += size[boss[y]]
+                for every z in set[boss[u]] do 
+                    boss[z] = boss[v]
+
+    }
+} 
+

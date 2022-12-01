@@ -1,9 +1,21 @@
 package Homework.HW4;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class KnapsackWeightBoundsWithSolution {
+
+    private static void printKnapsackItems(int[][] opt, int n, int w, int res, int[] weights, int[] costs) {
+        for (int i = n; i > 0 && res > 0; i--) {
+            if (res == opt[i - 1][w]) {
+            } else {
+                res = res - costs[i - 1];
+                w = w - weights[i - 1];
+                System.out.println(res + " ");
+            }
+        }
+
+    }
+
     public static void knapsack(int[] weights, int[] costs, int weight1, int weight2) {
         int len = weights.length;
         int[][] opt = new int[len + 1][weight2 + 1];
@@ -21,9 +33,20 @@ public class KnapsackWeightBoundsWithSolution {
                 }
             }
         }
-        for (int[] a : opt) {
-            System.out.println(Arrays.toString(a));
+        int max = Integer.MIN_VALUE;
+        int index = 0;
+        // max of the range of values if needed.
+        for (int i = weight1; i < weight2; i++) {
+            if (opt[len][i] > max) {
+                max = opt[len][i];
+                index = i;
+            }
         }
+        System.out.println(max);
+        int w = weight2;
+
+        printKnapsackItems(opt, index - 1, weight2, max, weights, costs);
+
     }
 
     public static void main(String[] args) {
