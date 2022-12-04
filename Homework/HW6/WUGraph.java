@@ -1,14 +1,23 @@
 public class WUGraph {
     private int vertices;
+    private int boss;
+    private int size = 0;
+    private LinkedList set;
 
     private LinkedList[] adjacencyList;
 
     public WUGraph(int vertices) {
         this.vertices = vertices;
+
         adjacencyList = new LinkedList[vertices];
+        set = new LinkedList();
 
         for (int i = 0; i < vertices; i++) {
             adjacencyList[i] = new LinkedList();
+        }
+
+        for (int i = 0; i < adjacencyList.length; i++) {
+
         }
     }
 
@@ -16,45 +25,20 @@ public class WUGraph {
         return vertices;
     }
 
-    public void addEdge(int source, int target, int weight) {
-        Edge nEdge = new Edge(source, target, weight);
-        adjacencyList[source].insert(nEdge);
-    }
-
-    public int find(int[] parent, int i) {
-        if (parent[i] == i)
-            return i;
-        return find(parent, parent[i]);
-    }
-
-    public void Union(int parent[], int x, int y) {
-        parent[x] = y;
-
-    }
-
-    public static int isCycle(WUGraph graph) {
-        int parent[] = new int[graph.getVertices()];
-
-        for (int i = 0; i < parent.length; i++) {
-
-        }
-        return 0;
-    }
-
     class LinkedList {
         Node head;
 
         static class Node {
-            Object value;
+            int value;
             Node next;
 
-            Node(Object obj) {
-                value = obj;
+            Node(int value) {
+                value = this.value;
                 next = null;
             }
         }
 
-        public void insert(Object data) {
+        public void insert(int data) {
             Node newNode = new Node(data);
 
             if (head == null) {
