@@ -5,22 +5,16 @@ public class WUGraph {
     private LinkedList set;
 
     private LinkedList[] adjacencyList;
-
     public WUGraph(int vertices) {
         this.vertices = vertices;
-
         adjacencyList = new LinkedList[vertices];
         set = new LinkedList();
-
         for (int i = 0; i < vertices; i++) {
             adjacencyList[i] = new LinkedList();
         }
-
         for (int i = 0; i < adjacencyList.length; i++) {
-
         }
     }
-
     public int getVertices() {
         return vertices;
     }
